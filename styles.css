@@ -79,6 +79,26 @@ input[type="text"], input[type="email"] {
     color: #fff;
 }
 
+/* Align checkboxes horizontally */
+.purpose-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;  /* Adjusts the spacing between options */
+}
+
+/* Style the checkboxes */
+input[type="radio"] {
+    accent-color: orange;  /* Set the theme color, e.g., orange */
+}
+
+.purpose-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;  /* Adjusts the spacing between checkbox and label */
+}
+
+
 button {
     width: 100%;
     padding: 10px;
