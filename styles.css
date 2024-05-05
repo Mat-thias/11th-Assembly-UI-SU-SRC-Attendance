@@ -111,27 +111,27 @@ button {
 
 button:hover {
     background-color: #d77a1a;
-}
-/* The Modal (background) */
+}/* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    position: fixed; /* Changed from fixed to absolute */
     z-index: 1000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Center the modal */
+    width: 80%; /* Adjust width as per your design needs */
+    max-width: 400px; /* Maximum width */
+    background-color: rgba(0,0,0,0.8); /* Black background with higher opacity */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow for 3D effect */
+    padding: 20px; /* Padding inside the modal */
 }
 
-/* Modal Content/Box */
 .modal-content {
-    background-color: #333; /* Dark background, similar to form */
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #f98c1f; /* Orange border */
-    width: 80%; /* Could be more or less, depending on screen size */
+    position: relative;
+    width: 100%; /* Make sure the content utilizes all the space */
+    color: white; /* Text color */
+    text-align: center; /* Center-align the text */
 }
 
 /* The Close Button */
