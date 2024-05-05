@@ -1,8 +1,6 @@
-document.getElementById("campaignForm").onsubmit = function() {
+document.getElementById("attendanceForm").onsubmit = function () {
     const securityCode = document.getElementById("securityCode").value;
     const confirmSecurityCode = document.getElementById("confirmSecurityCode").value;
-    const entryChecked = document.getElementById("entry").checked;
-    const exitChecked = document.getElementById("exit").checked;
 
     if (securityCode !== confirmSecurityCode) {
         alert("Security codes do not match!");
@@ -15,6 +13,8 @@ document.getElementById("campaignForm").onsubmit = function() {
         return false;
     }
 
+    const entryChecked = document.getElementById("entry").checked;
+    const exitChecked = document.getElementById("exit").checked;
     if (!entryChecked && !exitChecked) {
         alert("Please select whether you are registering for Entry or Exit.");
         return false;
@@ -24,13 +24,12 @@ document.getElementById("campaignForm").onsubmit = function() {
 };
 
 function validateEmail(email) {
-    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return re.test(String(email).toLowerCase());
+    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return re.test(email.toLowerCase());
 }
 
-
 function resetForm() {
-    document.getElementById("campaignForm").reset();
+    document.getElementById("attendanceForm").reset();
 }
 
 window.onload = resetForm;
