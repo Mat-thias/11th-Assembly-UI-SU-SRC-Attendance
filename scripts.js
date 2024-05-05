@@ -14,12 +14,12 @@ document.getElementById("attendanceForm").onsubmit = function () {
     }
     // More validations here
 
-    // const entryChecked = document.getElementById("entry").checked;
-    // const exitChecked = document.getElementById("exit").checked;
-    // if (!entryChecked && !exitChecked) {
-    //     alert("Please select whether you are registering for Entry or Exit.");
-    //     return false;
-    // }
+    const entryChecked = document.getElementById("entry").checked;
+    const exitChecked = document.getElementById("exit").checked;
+    if (!entryChecked && !exitChecked) {
+        alert("Please select whether you are registering for Entry or Exit.");
+        return false;
+    }
 
     return true;
 };
