@@ -112,6 +112,47 @@ button {
 button:hover {
     background-color: #d77a1a;
 }
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #333; /* Dark background, similar to form */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #f98c1f; /* Orange border */
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #f98c1f; /* Orange color to match your buttons */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff; /* White when hovered/focused for better visibility */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Text Style */
+#modalText {
+    color: #fff; /* White text color for readability */
+}
 
 @media (min-width: 768px) {
     .form-header {
