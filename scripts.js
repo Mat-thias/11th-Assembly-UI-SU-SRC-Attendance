@@ -14,23 +14,27 @@ document.getElementById("attendanceForm").onsubmit = function () {
     }
     // More validations here
 
-    const entryChecked = document.getElementById("entry").checked;
-    const exitChecked = document.getElementById("exit").checked;
-    if (!entryChecked && !exitChecked) {
-        alert("Please select whether you are registering for Entry or Exit.");
-        return false;
-    }
+    // const entryChecked = document.getElementById("entry").checked;
+    // const exitChecked = document.getElementById("exit").checked;
+    // if (!entryChecked && !exitChecked) {
+    //     alert("Please select whether you are registering for Entry or Exit.");
+    //     return false;
+    // }
 
     return true;
 };
 
 function showModal(message) {
     var modal = document.getElementById("myModal");
-    var span = document.getElementsByClassName("close")[0];
     document.getElementById("modalText").innerText = message;
-    
-    modal.style.display = "block";
 
+    // Calculate form's top offset to adjust modal's position
+    var formRect = document.getElementById("attendanceForm").getBoundingClientRect();
+    modal.style.top = `${window.scrollY + formRect.top + formRect.height + 10}px`; // 10px below the form
+
+    modal.style.display = "block";
+    
+    var span = document.querySelector(".modal .close");
     span.onclick = function() {
         modal.style.display = "none";
     }
@@ -41,7 +45,6 @@ function showModal(message) {
         }
     }
 }
-
 
 function validateEmail(email) {
     const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
